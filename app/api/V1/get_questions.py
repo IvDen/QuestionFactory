@@ -1,9 +1,7 @@
 from fastapi import APIRouter, Depends, Query
 from aiohttp import ClientSession
-from app.model.request_question import QuestionRequest
 
 
-# TODO extract router instance to some init file
 router = APIRouter()
 
 

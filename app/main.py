@@ -14,3 +14,6 @@ app = start()
 
 if __name__ == '__main__':
     pass
+
+#TODO req.txt
+#TODO Dockerfile

@@ -11,6 +11,7 @@ class AppContext:
 
     # TODO why async here broke the API
     def on_startup(self):
+        #TODO get dsn from file that will be in docker secrets
         self.appl.include_router(api.router)
         self.client = ClientSession()
 

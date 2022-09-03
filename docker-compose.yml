@@ -4,7 +4,7 @@ services:
   psql:
     image: postgres:14.4
     volumes:
-       - ./db/init:/docker-entrypoint-initdb.d
+       - ./db/secrets:/docker-entrypoint-initdb.d
        - psql_vol:/var/lib/postgresql/data
     environment:
 #      COMPOSE_PROJECT_NAME:

@@ -1,20 +1,18 @@
 import datetime
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class QuestionBase(BaseModel):
-    count: int
+    count: int = Field(gt=0, le=100)
 
 
-class QuestionFromAPI(QuestionBase):
+class QuestionFromAPI(BaseModel):
     id: int
     question: str
     answer: str
     airdate: datetime.datetime
 
 
-class Question(QuestionFromAPI):
-    # id: int
-
+class QuestionFromDb(QuestionFromAPI):
     class Config:
         orm_mode = True

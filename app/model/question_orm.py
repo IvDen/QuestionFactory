@@ -1,8 +1,5 @@
 from sqlalchemy import Column, Boolean, Integer, String, Text, PrimaryKeyConstraint, UniqueConstraint, DateTime
-from sqlalchemy.ext.declarative import declarative_base
-
-
-Base = declarative_base()
+from app.context_app.database import Base
 
 
 class Question(Base):

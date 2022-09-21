@@ -1,9 +1,9 @@
 #version: ""
 
 services:
-  question_api:
-    secrets:
-      - question_api_dsn
+#  question_api:
+#    secrets:
+#      - question_api_dsn
   psql:
     image: postgres:14.4
     volumes:
